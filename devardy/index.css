@@ -1,0 +1,51 @@
+html, body {
+	margin: 0;
+	padding: 0;
+  }
+  
+  * {
+	box-sizing: border-box;
+  }
+  
+  .board {
+	display: flex;
+	flex-direction: row;
+  }
+  
+  .category {
+	display: flex;
+	flex-direction: column;
+  }
+  
+  .answer {
+	position: fixed;
+	z-index: 10;
+	transition: height 0.5s ease-out, width 0.5s ease-out, top 0.5s ease-out, left 0.5s ease-out;
+  }
+  
+  .answer, .clue {
+	background-color: blue;
+	border: 3px solid white;
+	color: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+  }
+  
+  .clue {
+	height: calc(100vh / 5);
+	width: calc(100vw / 6);
+  }
+
+  .category_name {
+	  background_color: blue;
+	  height: calc(50vh / 5);
+	  width: calc(100vw / 6);
+	  border: 3px solid white;
+	  display: flex;
+	  justify-content: center;
+	  align-items: center;
+	  font-size: 40px
+  }
+
+
