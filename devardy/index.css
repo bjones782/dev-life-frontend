@@ -1,7 +1,7 @@
-html, body {
-	margin: 0;
-	padding: 0;
-  }
+/* html, body {
+	margin: 100;
+	padding: 100;
+  } */
   
   * {
 	box-sizing: border-box;
@@ -12,10 +12,10 @@ html, body {
 	flex-direction: row;
   }
   
-  .category {
+  /* .category {
 	display: flex;
 	flex-direction: column;
-  }
+  } */
   
   .answer {
 	position: fixed;
@@ -33,19 +33,21 @@ html, body {
   }
   
   .clue {
-	height: calc(100vh / 5);
-	width: calc(100vw / 6);
+	/* height: 5px;
+	width: 50%; */
+	height: calc(75vh / 5);
+	width: calc(100vw / 5);
   }
 
   .category_name {
-	  background_color: blue;
+	  background: blue;
 	  height: calc(50vh / 5);
 	  width: calc(100vw / 6);
 	  border: 3px solid white;
 	  display: flex;
 	  justify-content: center;
 	  align-items: center;
-	  font-size: 40px
+	  font-size: 30px
   }
 
 
