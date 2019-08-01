@@ -25,19 +25,43 @@ function createCard(question){
     const board = document.querySelector(".board")
 
     let questionDiv = document.createElement('div')
-    questionDiv.innerText = question.amount
+    questionDiv.innerText = "$" + question.amount
     questionDiv.className = "clue"
     questionDiv.setAttribute("data-id", question.id)
+    questionDiv.style.height = "80px"
+    questionDiv.style.width = "100%"
     // questionDiv.setAttribute("data-answer", question.answer)
     questionDiv.addEventListener('click', handleClicks)
     board.appendChild(questionDiv)
-
+    
 }
 
 function handleSubmit(e){
-    // let button = document.querySelector('button')
+    
     e.preventDefault()
-    console.log("HandleSubmit", e.target)
+
+    // console.log(ptag.dataset.answer)
+    // console.log(e.target["user-answer"].value)
+
+
+    fetch(users)
+    .then(resp => resp.json())
+    .then(users => checkAnswer(users))  
+}      
+    // if(ptag.dataset.answer === e.target["user-answer"].value){
+    //     alert("You got it right!")
+    //     question.amount += users.user_points 
+    //     console.log("User answer", user.user_points)
+    // } else {
+    //     alert("Sorry, wrong answer")
+    // }
+
+    
+    // if( e.target["user-answer"].value){
+    //     checkAnswer()
+    //     getQuestionAnswer()
+       
+    
 
     // function handleSubmit(e){
     //     e.preventDefault()
@@ -54,16 +78,37 @@ function handleSubmit(e){
     // .then(res => res.json())
     // .then(questions => console.log(questions))
 
+
+
+function checkAnswer(users){
+    console.log(users)
+    let ptag = document.querySelector("#question")
+    let userAnswer = document.getElementById("user-answer").value
+    
+    
+
+    if(ptag.dataset.answer === user.answer){
+        alert("You got it right!")
+        question.amount += users.user_points 
+        console.log("User answer", user.user_points)
+    } else {
+        alert("Sorry, wrong answer")
+    }
+
 }
 
-function checkAnswer(question){
+function getQuestionAnswer(){
+    
 //    console.log("check again", question)
-    let userAnswer = document.getElementById("user-answer").value
+    fetch(`http://localhost:3000/questions/`)
+    .then(res => res.json())
+    .then(questions => questions.map(question => checkAnswer(question)))
+    // let userAnswer = document.getElementById("user-answer").value
     // userAnswer.setAttribute("data-id", question.id)
-    if(userAnswer.downcase === question.answer){
-        alert(YAY)
+    // if(userAnswer.downcase === question.answer.value){
+    //     alert(YAY)
         
-    }
+    // }
 } 
 
 function handleClicks(e){
@@ -89,6 +134,10 @@ function renderShowPage(question){
     
     let p = document.createElement('p')
     p.innerText = question.clue
+    p.id = "question"
+    p.setAttribute("data-id", question.id)
+    p.setAttribute("data-answer", question.answer)
+    p.setAttribute("data-amount", question.amount)
     showPage.appendChild(p)
 
     // let inputForm = document.getElementsByClassName("input-form")

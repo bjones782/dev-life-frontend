@@ -14,7 +14,7 @@ html {
     background-color: #15006f;
   }
   
-  #board {
+  .board {
     overflow: hidden;
     border: 0.3vw solid black;
   }

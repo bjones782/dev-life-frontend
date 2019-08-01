@@ -3,43 +3,79 @@
 	padding: 100;
   } */
   
-  * {
+  /* * {
 	box-sizing: border-box;
-  }
+  } */
+
+  /* body {
+	background-image: url("https://ss1-fkj3kofiepc0vlx.netdna-ssl.com/wp-content/uploads/2015/03/jeopardy_slot_bg.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+ 
+  footer {
+	  background-color: black;
+  } */
   
   .board {
-	display: flex;
-	flex-direction: row;
+	overflow: hidden;
+    border: 0.3vw solid black;
+	display: grid;
+	grid-column-gap: 1px;
+	grid-row-gap: 1px;
+	grid-template-columns: auto auto auto auto auto;  
+	/* background-color: #2196F3; */
+	/* padding: 2px; */
+	float: center;
+	font-size: 65px;
+	text-align: center;
+	height: 460px;
+	width: 70%;
+	margin: 0px 0px 0px 200px;
+	/* align: center; */
+	background-color: black;
+	padding-right: 2px;
+	padding-left: 2px;
+	
+  
   }
+
+  /* body{
+	background-color: grey
+  } */
+
   
   /* .category {
 	display: flex;
 	flex-direction: column;
   } */
   
-  .answer {
+  /* .answer {
 	position: fixed;
 	z-index: 10;
 	transition: height 0.5s ease-out, width 0.5s ease-out, top 0.5s ease-out, left 0.5s ease-out;
-  }
+  } */
   
   .answer, .clue {
 	background-color: blue;
-	border: 3px solid white;
-	color: white;
+	border: 3px solid black;
+	color:gold;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-  }
+	padding: 2px;
+	font-family: Impact, sans-serif;
+	text-shadow: 2px 2px 4px #000000;
+  } 
   
-  .clue {
+  /* .clue {
 	/* height: 5px;
 	width: 50%; */
-	height: calc(75vh / 5);
-	width: calc(100vw / 5);
-  }
+	/* height: calc(75vh / 5);
+	width: calc(100vw / 5); */
+  /* } */ */
 
-  .category_name {
+  /* .category_name {
 	  background: blue;
 	  height: calc(50vh / 5);
 	  width: calc(100vw / 6);
@@ -48,6 +84,6 @@
 	  justify-content: center;
 	  align-items: center;
 	  font-size: 30px
-  }
+  } */
 
 
