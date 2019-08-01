@@ -78,6 +78,13 @@ function handleSubmit(e){
     // .then(res => res.json())
     // .then(questions => console.log(questions))
 
+    function createLoginForm(user){
+        let div1 = document.querySelector("login-form")
+        let loginForm = document.getElementById("user-login")
+        div1.appendChild(loginForm)
+
+    }
+
 
 
 function checkAnswer(users){
@@ -85,7 +92,7 @@ function checkAnswer(users){
     let ptag = document.querySelector("#question")
     let userAnswer = document.getElementById("user-answer").value
     
-    
+
 
     if(ptag.dataset.answer === user.answer){
         alert("You got it right!")
