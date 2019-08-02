@@ -21,7 +21,9 @@
 <body>
   <head>
 
-    <h1>Devardy!</h1>
+    <h1>Welcome To Devardy!</h1>
+    <h5>The Game Show For Developers</h5>
+    <p class="extra">Remember, State Your Answer in The Form of A Question</p>
     <!-- <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2hPZIIIxOiV1GHawECkLPgj2XKdfwc5Z-8KAgf8PTZUf2TpLr" > -->
 
 
@@ -31,9 +33,9 @@
   <div class="board">
   </div>
   <div class="show-page">
-      <form>
-        Put Answer Here<br>
-        <input id="user-answer" class="answer" type="text" name="your-answer" value="">
+      <form class="input-form">
+        Answer Here<br>
+        <input id="user-answer" class="answer" type="text" name="your-answer"  value="">
         <br>
         <br>
         <input type="submit" value="Submit">
@@ -50,8 +52,8 @@
           <div class="clue" id="4" data-id=${question.id}>${question.amount}</div>
         </div> -->
         <div class="login-form" >
-          Login
-          <form>
+          Sign Up/Login
+          <form id="for-for-user">
               <input id="user-login" class="login" type="text" name="user-name" value="">
               <br>
               <br>
@@ -71,10 +73,10 @@
 
 
 
-  <div id="pageWrapper"> 
+  <!-- <div id="pageWrapper"> 
           <div id="board"></div>
           <a id="reset" href="#">Reset the game?</a>
-        </div>
+        </div> -->
         <script src="index.js"></script>
         <!-- <script src="app.js"></script>   -->
 

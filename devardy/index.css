@@ -1,97 +1,153 @@
 /* html, body {
-	margin: 100;
-	padding: 100;
+    margin: 100;
+    padding: 100;
   } */
   
   /* * {
-	box-sizing: border-box;
+    box-sizing: border-box;
   } */
 
-  /* body {
-	background-image: url("https://ss1-fkj3kofiepc0vlx.netdna-ssl.com/wp-content/uploads/2015/03/jeopardy_slot_bg.jpg");
-	background-repeat: no-repeat;
-	background-size: cover;
-}
+  body {
+    background-image: url("https://ss1-fkj3kofiepc0vlx.netdna-ssl.com/wp-content/uploads/2015/03/jeopardy_slot_bg.jpg");
+    background-repeat: auto;
+    background-size: cover;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+
+     } 
  
+
   footer {
-	  background-color: black;
-  } */
+      background-color: black;
+  } 
   
-  .board {
-	overflow: hidden;
-    border: 0.3vw solid black;
-	display: grid;
-	grid-column-gap: 1px;
-	grid-row-gap: 1px;
-	grid-template-columns: auto auto auto auto auto;  
-	/* background-color: #2196F3; */
-	/* padding: 2px; */
-	float: center;
-	font-size: 65px;
-	text-align: center;
-	height: 460px;
-	width: 70%;
-	margin: 0px 0px 0px 200px;
-	/* align: center; */
-	background-color: black;
-	padding-right: 2px;
-	padding-left: 2px;
+  
+  h1 {
+    text-align: center;
+    color: #fff;
+    font-family: Impact, sans-serif;
+    font-size: 78px;
+
+   
+   }
+
+   h5 {
 	
-  
-  }
+	text-align: center;
+    color: #fff;
+    font-family: Impact, sans-serif;
+    font-size: 30px;
+
+
+   }
+
+   .extra {
+	text-align: center;
+    color: #fff;
+    font-family: Impact, sans-serif;
+    font-size: 25px;
+   }
 
   .login-form {
-	  text-align: center;
+    color: #fff;
+    position: absolute;
+    top: 30px;
+	right: 120px;
+	font-size: 25px
+
   }
 
-  .answer {
-	  text-align: top;
+  .board {
+    overflow: hidden;
+    border: 0.3vw solid black;
+    display: grid;
+    grid-column-gap: 1px;
+    grid-row-gap: 1px;
+    grid-template-columns: auto auto auto auto auto;  
+    /* background-color: #2196F3; */
+    /* padding: 2px; */
+    float: center;
+    font-size: 65px;
+    text-align: center;
+    height: 460px;
+    width: 70%;
+    margin: 0px 0px 0px 280px;
+    /* align: center; */
+    background-color: black;
+    padding-right: 2px;
+    padding-left: 2px;
+    
+  
+  }
+
+  .show-page {
+      text-align: center;
+      position: center;
+      color: #fff;
+      font-size: 30px
   }
 
   /* body{
-	background-color: grey
+    background-color: grey
   } */
 
   
   /* .category {
-	display: flex;
-	flex-direction: column;
+    display: flex;
+    flex-direction: column;
   } */
   
   /* .answer {
-	position: fixed;
-	z-index: 10;
-	transition: height 0.5s ease-out, width 0.5s ease-out, top 0.5s ease-out, left 0.5s ease-out;
+    position: fixed;
+    z-index: 10;
+    transition: height 0.5s ease-out, width 0.5s ease-out, top 0.5s ease-out, left 0.5s ease-out;
   } */
   
   .answer, .clue {
-	background-color: blue;
-	border: 3px solid black;
-	color:gold;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	padding: 2px;
-	font-family: Impact, sans-serif;
-	text-shadow: 2px 2px 4px #000000;
+    background-color: blue;
+    border: 3px solid black;
+    color:gold;
+    text-align: center;
+    position: center;
+    padding: 3px;
+    font-family: Impact, sans-serif;
+    /* font-size: 14px; */
+     /* text-shadow: 2px 2px 4px #000000;  */
   } 
   
   /* .clue {
-	/* height: 5px;
-	width: 50%; */
-	/* height: calc(75vh / 5);
-	width: calc(100vw / 5); */
+    /* height: 5px;
+    width: 50%; */
+    /* height: calc(75vh / 5);
+    width: calc(100vw / 5); */
   /* } */ 
 
   /* .category_name {
-	  background: blue;
-	  height: calc(50vh / 5);
-	  width: calc(100vw / 6);
-	  border: 3px solid white;
-	  display: flex;
-	  justify-content: center;
-	  align-items: center;
-	  font-size: 30px
+      background: blue;
+      height: calc(50vh / 5);
+      width: calc(100vw / 6);
+      border: 3px solid white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 30px
   } */
+/* question box details */
+  #question {
+      background:black;
+      margin: auto;
+      border: 2px solid blue;
+      color:white;
+      display: inline;
+      padding: 10px;
+      font-size: 20px;
+    
+  }
 
 
+  /* submit button for answer */
+  .submit {
+      margin: 20px;
+  }
