@@ -60,11 +60,7 @@ function handleSubmit(e){
         alert(ptag.dataset.answer)
         
         console.log(question.answer)
-        
-        
-        
-        
-        // console.log("User answer", users.user_points)
+           // console.log("User answer", users.user_points)
     } 
     else if(!ptag.dataset.answer.downcase === e.target["user-answer"].value.downcase){
         alert("Sorry, wrong answer")
@@ -79,6 +75,19 @@ function addUserAmount(question, users){
 
    question.amount += users.user_points
 
+}
+
+function returningUser(users){
+    fetch(users + user.id, {
+        method: "PATCH",
+        headers: {
+            "Content-Type": "application/json",
+            "Accept": "application/json"
+        },
+        body: JSON.stringify({users: user_name})
+    })
+    .then(res => res.json())
+    .then(user => showUserPanel(user))
 }
     
     
@@ -106,16 +115,29 @@ function addUserAmount(question, users){
             body: JSON.stringify(newUser)
         })
         .then(res => res.json())
-        .then(user => console.log("New User", user))
-        
+        .then(user => showUserPanel(user))
+        // console.log("User Info", user)
         
     }
 
+    function showUserPanel(user){
+        console.log("User Info", user)
+      let div =  document.getElementById("user-panel")
+      let showUser = document.createElement("p")
+      let showUserAmount = document.createElement("p")
+      let showGoals = document.createElement("p")
+      showUser.innerText = "Good to See You!      " +  user.user_name 
+      showUserAmount.innerText = "You Have   "  + user.user_points + "   Points"
+      showGoals.innerText = "On to The Next Goal   " + user.goals 
+      
+      div.appendChild(showUserAmount)
+      div.appendChild(showGoals)
+      div.appendChild(showUser)
+    }
+
     function createLoginForm(){
-        let loginForm = document.getElementById("for-for-user").reset()
-        loginForm.addEventListener("submit", handleUserSubmit)
-        loginForm.reset()
-        
+        let loginForm = document.getElementById("for-for-user")
+        loginForm.addEventListener("submit", handleUserSubmit)    
     }
 
 

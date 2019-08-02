@@ -75,8 +75,8 @@ html {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100vw;
-    height: 100vh;
+    width: 200vw;
+    height: 800vh;
     background: #15006f;
     z-index: 4;
     display: flex;
