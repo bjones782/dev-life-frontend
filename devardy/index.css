@@ -146,6 +146,19 @@
     
   }
 
+  .show-user {
+    border: 1px solid blue;
+    background:black;
+    text-align: center;
+    color: gold;
+    font-family: Arial, sans-serif;
+    font-size: 30px;
+    position: absolute;
+    top: 30px;
+	  left: 120px;
+	
+  }
+
 
   /* submit button for answer */
   .submit {
